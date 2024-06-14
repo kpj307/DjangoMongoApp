@@ -1,1 +1,1 @@
-web: gunicorn pdf_processor.wsgi
+web: gunicorn pdf_processor.wsgi --log-file -
