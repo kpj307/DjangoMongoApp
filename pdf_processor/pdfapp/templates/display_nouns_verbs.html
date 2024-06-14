@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nouns and Verbs</title>
+  </head>
+  <body>
+    <h1>Extracted Nouns and Verbs</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Nouns</th>
+          <th>Verbs</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for file in files %}
+        <tr>
+          <td>{{ file.email }}</td>
+          <td>{{ file.nouns }}</td>
+          <td>{{ file.verbs }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br />
+    <a href="{% url 'upload-form' %}">Upload another PDF</a>
+  </body>
+</html>
